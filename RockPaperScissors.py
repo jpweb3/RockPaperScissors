@@ -4,6 +4,7 @@ print("Welcome to Rock Paper Scissors! ")
 
 while True:
     user_choice = input("Please make a selection (rock, paper, or scissors): ")
+    print()
     possible_choices = ["rock", "paper", "scissors"]
     computer_choice = random.choice(possible_choices)
     print(f" \n Your selection was {user_choice},  Your opponent's selection was {computer_choice}")
@@ -14,7 +15,7 @@ while True:
         computer_choice = random.choice(possible_choices)
         if user_choice != computer_choice:
             break
-    #Make it so if its a tie both players choose again
+    # Tie Breaker
     if user_choice == "paper":
         if computer_choice  == "rock":
             print("Paper covers Rock! You Win!")
@@ -30,6 +31,7 @@ while True:
             print("Scissors cuts paper, you win")
         else:
             print("Rock smashes scissors, you lose")
+    print()
     print("Thank you for playing")
     play_again = input("Would you like to play again? (y/n): ")
     if play_again.lower() != "y":
